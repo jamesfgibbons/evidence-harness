@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "task": {
+    "id": "replace-me",
+    "intent": "Describe the intended outcome"
+  },
+  "selected_references": [],
+  "authority": {
+    "source": "Describe the authoritative source",
+    "expected_state": {}
+  },
+  "observed_state": {},
+  "action": {
+    "class": "observe",
+    "requested": "Describe the bounded action",
+    "authorization_present": true
+  },
+  "decision": {
+    "status": "unknown",
+    "reasons": []
+  },
+  "verification": {
+    "checks": []
+  },
+  "artifacts": [],
+  "limitations": [],
+  "status": "unknown"
+}
+

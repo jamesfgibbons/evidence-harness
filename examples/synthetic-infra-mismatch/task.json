@@ -1,0 +1,15 @@
+{
+  "id": "synthetic-infra-mismatch",
+  "intent": "Deploy the reviewed sample service to its declared production project",
+  "selected_references": [
+    "references/resolver.md",
+    "references/authority-and-action.md",
+    "references/verification-and-receipts.md"
+  ],
+  "action": {
+    "class": "mutate",
+    "requested": "Deploy the sample service",
+    "authorization_present": false
+  }
+}
+

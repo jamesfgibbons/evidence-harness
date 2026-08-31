@@ -1,0 +1,108 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://jamesfgibbons.com/releases/harness/schemas/completion-receipt.schema.json",
+  "title": "Evidence Harness Completion Receipt",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "generated_at",
+    "task",
+    "selected_references",
+    "authority",
+    "observed_state",
+    "action",
+    "decision",
+    "verification",
+    "artifacts",
+    "limitations",
+    "status"
+  ],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "generated_at": { "type": "string", "format": "date-time" },
+    "task": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "intent"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "intent": { "type": "string" }
+      }
+    },
+    "selected_references": {
+      "type": "array",
+      "items": { "type": "string" },
+      "uniqueItems": true
+    },
+    "authority": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source", "expected_state"],
+      "properties": {
+        "source": { "type": "string", "minLength": 1 },
+        "expected_state": { "type": "object" }
+      }
+    },
+    "observed_state": { "type": "object" },
+    "action": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["class", "requested", "authorization_present"],
+      "properties": {
+        "class": {
+          "enum": ["observe", "export", "mutate", "destructive"]
+        },
+        "requested": { "type": "string" },
+        "authorization_present": { "type": "boolean" }
+      }
+    },
+    "decision": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "reasons"],
+      "properties": {
+        "status": { "enum": ["allowed", "blocked", "unknown"] },
+        "reasons": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "verification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["checks"],
+      "properties": {
+        "checks": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["id", "result"],
+            "properties": {
+              "id": { "type": "string", "minLength": 1 },
+              "result": {
+                "enum": ["pass", "fail", "unknown", "not_applicable"]
+              }
+            }
+          }
+        }
+      }
+    },
+    "artifacts": { "type": "array", "items": { "type": "string" } },
+    "limitations": { "type": "array", "items": { "type": "string" } },
+    "status": {
+      "enum": [
+        "drafted",
+        "verified-local",
+        "published",
+        "live-verified",
+        "blocked",
+        "deferred",
+        "unknown"
+      ]
+    }
+  }
+}
+

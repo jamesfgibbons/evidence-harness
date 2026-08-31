@@ -1,0 +1,6 @@
+interface:
+  display_name: "Evidence Harness"
+  short_description: "Govern agent work with evidence and boundaries"
+  default_prompt: "Use $evidence-harness to plan and complete this task with the right context, authority checks, and verification."
+policy:
+  allow_implicit_invocation: true

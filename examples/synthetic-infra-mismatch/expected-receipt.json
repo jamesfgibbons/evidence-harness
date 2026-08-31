@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-31T20:00:00+00:00",
+  "task": {
+    "id": "synthetic-infra-mismatch",
+    "intent": "Deploy the reviewed sample service to its declared production project"
+  },
+  "selected_references": [
+    "references/resolver.md",
+    "references/authority-and-action.md",
+    "references/verification-and-receipts.md"
+  ],
+  "authority": {
+    "source": "synthetic-project-contract.json",
+    "expected_state": {
+      "project": "sample-project-alpha",
+      "environment": "production",
+      "service": "web"
+    }
+  },
+  "observed_state": {
+    "project": "sample-project-beta",
+    "environment": "production",
+    "service": "web"
+  },
+  "action": {
+    "class": "mutate",
+    "requested": "Deploy the sample service",
+    "authorization_present": false
+  },
+  "decision": {
+    "status": "blocked",
+    "reasons": [
+      "mismatch:project",
+      "authorization:missing"
+    ]
+  },
+  "verification": {
+    "checks": [
+      {
+        "id": "authority-state-match",
+        "result": "fail"
+      },
+      {
+        "id": "required-authorization",
+        "result": "fail"
+      }
+    ]
+  },
+  "artifacts": [],
+  "limitations": [
+    "This receipt evaluates declared state and authorization only.",
+    "It does not execute or verify the requested external action."
+  ],
+  "status": "blocked"
+}
+

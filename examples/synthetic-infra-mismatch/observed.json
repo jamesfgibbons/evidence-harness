@@ -1,0 +1,9 @@
+{
+  "observed_at": "2026-08-31T20:00:00+00:00",
+  "state": {
+    "project": "sample-project-beta",
+    "environment": "production",
+    "service": "web"
+  }
+}
+

@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "evidence-harness",
+  "name": "Evidence Harness",
+  "author": "James Gibbons",
+  "version": "0.1.0",
+  "maturity": "preview",
+  "publication_authorized": true,
+  "proof_mode": "synthetic",
+  "canonical_repository": "https://github.com/jamesfgibbons/evidence-harness",
+  "skill_path": "skills/evidence-harness",
+  "included_top_level_paths": [
+    ".github",
+    ".gitignore",
+    "CHANGELOG.md",
+    "CONTRIBUTING.md",
+    "LICENSE",
+    "LICENSE-DOCS",
+    "PROVENANCE.md",
+    "PUBLIC_SURFACE.json",
+    "README.md",
+    "RELEASE_APPROVAL.md",
+    "RELEASING.md",
+    "SECURITY.md",
+    "SPEC.md",
+    "docs",
+    "examples",
+    "releases",
+    "schemas",
+    "scripts",
+    "skills",
+    "tests"
+  ],
+  "forbidden_classes": [
+    "credentials",
+    "private_paths",
+    "private_contracts",
+    "client_material",
+    "production_identifiers",
+    "private_prompts",
+    "raw_agent_traces"
+  ]
+}

@@ -30,7 +30,7 @@ Download the release archive and copy `evidence-harness/` into the skills direct
 - Proof mode: synthetic.
 - Unit and conformance results: skill validation passed; four behavioral tests passed; public-hygiene scan reported zero findings.
 - Archive SHA-256: `c795c8abf7b18c6a3764cc32a3a456f1d34c8dd93ca182cc211a7b0de17e5015`.
-- Public-repository history gate: required before the public push.
+- Public-repository history gate: passed with zero findings across the current tree and complete Git history.
 
 ## Status
 

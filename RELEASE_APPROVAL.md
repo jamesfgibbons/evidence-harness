@@ -29,11 +29,13 @@
 - [x] Synthetic proof produces the expected blocked receipt.
 - [x] Public-hygiene scan passes with zero findings and without printing matched values.
 - [x] Candidate package runs after extraction into a clean temporary directory.
-- [ ] Current-tree and full-history publication gates pass before public push.
+- [x] Current-tree and full-history publication gates pass before public push.
 - [x] Every included path is classified in the private candidate manifest.
 - [x] The approved candidate manifest is installed into the active private publication registry.
 
 Candidate skill archive SHA-256: `c795c8abf7b18c6a3764cc32a3a456f1d34c8dd93ca182cc211a7b0de17e5015`.
+
+Private publication gate: `PASS` with zero findings across 34 tracked files and complete Git history at 2026-08-31T21:01:53Z.
 
 ## Founder decisions
 

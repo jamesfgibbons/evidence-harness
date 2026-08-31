@@ -12,7 +12,7 @@ title: "Evidence Harness"
 author: "James Gibbons"
 status: "public preview"
 prepared: "2026-08-31"
-first_public_commit: null
+first_public_commit: "dcecb6353c9fcfb6d5b3d4374c2118067ffab1b6"
 first_public_date: "2026-08-31"
 canonical_repository: "https://github.com/jamesfgibbons/evidence-harness"
 license_code: "Apache-2.0"

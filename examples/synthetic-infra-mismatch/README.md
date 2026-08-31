@@ -7,6 +7,8 @@
 > **SOURCE OF TRUTH:** The fixture files in this directory  
 > **GATE:** The requested mutation must remain blocked
 
+**Provenance mode: synthetic.** Every project name, identifier, state, and result in this fixture is invented for this public demonstration.
+
 The task requests a deployment to the project declared by `authority.json`. The observed context intentionally names a different project, and the task contains no mutation authorization.
 
 Running the receipt helper produces two blocking reasons:
@@ -17,4 +19,3 @@ Running the receipt helper produces two blocking reasons:
 The helper records the decision and executes no deployment command.
 
 `expected-receipt.json` is the complete golden output used by the release check.
-

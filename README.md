@@ -78,7 +78,11 @@ python3 scripts/release_check.py
 ## Related public work
 
 - Constitutional CMS owns formal publishing-governance and conformance doctrine.
-- VIBEnet owns perceptual and temporal adapters.
+- [VIBEnet Adapter for Codex](https://github.com/jamesfgibbons/vibenet-adapter-codex)
+  makes authorized agent lifecycle state observable without exposing prompts,
+  responses, reasoning, commands, paths, or raw source identifiers.
+- VIBEnet owns perceptual and temporal adapters. Evidence Harness is a gate;
+  the Codex adapter is a sensor. Either can be used independently.
 - Open Demand OS owns public demand-decision skills.
 - jamesfgibbons.com explains and indexes releases from the `jamesfgibbons` namespace.
 
